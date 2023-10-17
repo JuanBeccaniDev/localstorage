@@ -1,107 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Refugio Patitas</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini Tienda de Mascotas</title>
 </head>
 <body>
-  <header class="header">
-    <h2 class="header--title animate__animated animate__rotateInDownLeft"><a href="../index.html">Refugio Patitas</a></h2>
-    <form class="header--form animate__animated animate__zoomInLeft">
-      <input type="text" name="searchBar" id="searchBar" class="header--searchBar">
-      <input type="button" value="Buscar" class="header--searchButton">
-    </form>
-    <nav class="nav animate__animated animate__zoomInLeft">
-      <ul>
-        <li><a href="../index.html"><i class="fas fa-home nav--icon" aria-hidden="true"></i>Inicio</a></li>
-        <li><a href="./services.html"><i class="fas fa-heart nav--icon" aria-hidden="true"></i>Servicios</a></li>
-        <li><a href="#"><i class="fas fa-solid fa-wrench nav--icon"></i>Tools</a></li>
-        <li><a href="./team.html"><i class="fas fa-users nav--icon" aria-hidden="true"></i>Equipo</a></li>
-        <li><a href="./contact.html"><i class="far fa-address-card nav--icon" aria-hidden="true"></i>Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main class="tools">
-    <section class="income">
-      <form class="income__form">
-        <label for="income__petName">Nombre de la mascota a ingresar:</label>
-        <input type="text" name="petName" id="income__petName" required>
-        <select name="income__petSize" id="forms__size" required>
-          <option value="" selected disabled>Tamaño</option>
-          <option value="mini">Mini</option>
-          <option value="pequeño">Pequeño</option>
-          <option value="mediano">Mediano</option>
-          <option value="grande">grande</option>
-          <option value="gigante">gigante</option>
-        </select>
-        <select name="income__petWeight" id="forms__weight" required>
-          <option value="" selected disabled>Peso</option>
-          <option value="desnutrido">Desnutrido</option>
-          <option value="delgado">Delgado</option>
-          <option value="ideal">Ideal</option>
-          <option value="sobrepeso">Sobrepeso</option>
-          <option value="obeso">Obeso</option>
-        </select>
-        <label for="income__petAge">Edad de la mascota:</label>
-        <input type="number" name="Edad" id="income__petAge" required>
-        <div class="income__petDangerousForHumans">
-          <h5>¿Es peligroso para los humanos?</h4>
-          <input type="checkbox" name="dangerousForHumans" id="isDangerousForHumans">
-        </div>
-        <div class="income__petDangerousForOtherPets">
-          <h5>¿Es peligroso para las demás mascotas?</h4>
-          <input type="checkbox" name="dangerousForOtherPets" id="isDangerousForOtherPets">
-        </div>
-        <div class="income__petSick">
-          <h5>¿Se encuentra enferma la mascota?</h4>
-          <input type="checkbox" name="petSick" id="isSick">
-        </div>
-        <div class="income__specialTreatment">
-          <h5>¿La mascota necesita un tratamiento especial?</h4>
-          <input type="checkbox" name="specialTreatment" id="needAnSpecialTreatment">
-        </div>
-        <input type="submit" value="Cargar">
-        <input type="reset" value="Limpiar">
-      </form>
-    </section>
-    <section class="animatedRooms">
-      <div class="animatedRooms__container"></div>
-    </section>
-    <section class="lists">
-      <div class="lists__container">
-        <h3 class="lists__pets--title">Mascotas en el refugio.</h3>
-        <ul class="lists__pets"></ul>
-      </div>
-      <div class="lists__petDetails"></div>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="footer--social">
-      <p>Siguenos en</p>
-      <a href="#"><i class="fab fa-facebook-square footer--icon" aria-hidden="true"></i></a>
-      <a href="#"><i class="fab fa-instagram footer--icon" aria-hidden="true"></i></a>
-      <a href="#"><i class="fab fa-twitter footer--icon" aria-hidden="true"></i></a>
-      <a href="#"><i class="fab fa-youtube footer--icon" aria-hidden="true"></i></a>
-    </div>
-    <div class="footer--info">
-      <h2 class="footer--info__h2"></h2>
-      <p></p>
-    </div>
-    <div class="footer--contact">
-      <p>Contáctanos</p>
-      <a href="#"><i class="far fa-envelope footer--icon" aria-hidden="true"></i></a>
-      <a href="#"><i class="fab fa-whatsapp footer--icon" aria-hidden="true"></i></a>
-    </div>
-  </footer>
-  <script src="https://kit.fontawesome.com/42f502ebab.js" crossorigin="anonymous"></script>
-  <script src="js/main.js"></script>
+  <h1>Mini Tienda de Mascotas</h1>
+
+  <div id="petList">
+    <!-- Aquí se mostrarán las mascotas disponibles -->
+  </div>
+
+  <div>
+    <h2>Agregar Mascota</h2>
+    <label for="petName">Nombre:</label>
+    <input type="text" id="petName">
+    <label for="petPrice">Precio:</label>
+    <input type="number" id="petPrice">
+    <button id="addPet">Agregar</button>
+  </div>
+
+ <script src="./js/main.js"></script>
 </body>
 </html>
+
+
+
